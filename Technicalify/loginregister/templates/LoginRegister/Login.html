@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    Pieslēgties
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class='Login-Box'>
+        <div class='Main-box'>
+            <h2 class='log-title'> Pieslēgties </h2>
+            {% for message in messages %}
+                <p id="messages">{{message}}</p>
+            {% endfor %}
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" name='username' class='log' required='required' placeholder='Lietotājvārds'>
+                <input type="password" name='password' class='log' required='required' placeholder='Parole'>
+                <button type='submit' placeholder='Reģistrēties2' class='submit'>
+                    <label>Pieslēgties</Label>
+                </button>
+                <div class='SignUp-Link'>
+                    <p>Vai tev vel nav Profils? 
+                        <a href='{% url 'register' %}' class='SignUpBtn-Link'>Reģistrēties</a>
+                    </p>
+                    <p>Vai aizmirsi paroli? 
+                        <a href='' class='SignUpBtn-Link'>Atjaunot paroli</a>
+                    </p>
+                </div>
+                <div class='social-platform'>
+                    <p>Pieslēgties ar</p>
+                    <div class='social-icons'>
+                        <a class='google'><i class="fa-brands fa-google" id='google'></i></a>
+                        <a class='facebook'><i class="fa-brands fa-facebook-f" class='facebook'></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

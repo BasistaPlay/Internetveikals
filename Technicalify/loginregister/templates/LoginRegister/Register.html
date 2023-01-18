@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    Reģistrēties
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/Register.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class='Register-box'>
+        <div class='main-box'>
+            <h2 class='reg-title'> Reģistrēties </h2>
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ form }}
+                <button type='submit' class='submit'>
+                    <p>Reģistrēties</p>
+                </button>
+                <div class='SignUp-Link'>
+                    <p>Vai tev jau ir Profils? 
+                        <a href='{% url 'login' %}' class='SignUpBtn-Link'>Pieslēgties</a>
+                    </p>
+                </div>
+                <div class='social-platform'>
+                    <p>Reģistrējies ar</p>
+                    <div class='social-icons'>
+                        <a class='google'><i class="fa-brands fa-google" id='google'></i></a>
+                        <a class='facebook'><i class="fa-brands fa-facebook-f" class='facebook'></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder = 'Lietotājvārds'
+        form_fields[2].placeholder = 'E-pasts'
+        form_fields[3].placeholder = 'Parole'
+        form_fields[4].placeholder = 'Atkārtot paroli'
+        form_fields[5].placeholder = 'Jūsu vārds'
+        form_fields[6].placeholder = 'Jūsu Uzvārds'
+    </script>
+{% endblock %}
