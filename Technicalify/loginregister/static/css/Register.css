@@ -94,6 +94,8 @@ label{
     line-height: 35px;
     align-items: center;
     cursor: pointer;
+    text-decoration: none; 
+    color: black; 
 }
 
 .social-icons a i{
@@ -123,6 +125,7 @@ label{
     text-align: center;
     font-family: 'cabin';
     margin-top: 20px;
+    
 }
 
 li{

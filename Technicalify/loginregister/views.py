@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model, authenticate, login, logout
 from django.contrib.auth import login as auth_login
 from .forms import *
 from django.contrib import messages
+from django.utils.translation import gettext as _
 
 
 # Create your views here.
@@ -20,7 +21,7 @@ def register(request):
             user = form.save(commit=False)
             user.is_active = False
             user.save()
-            messages.success(request, "Reģistrācija notika veiksmīga")
+            messages.success(request, _('Jūs esat veiksmīgi piereģistrējies'))
             return redirect('login')
 
 
@@ -39,7 +40,7 @@ def login(request):
             auth_login(request, user)
             return redirect('home')
         else:
-            messages.warning(request, 'Nav pareizs lietotājvārds vai parole')
+            messages.warning(request, _('Nav pareizs lietotājvārds vai parole'))
 
     return render(request, 'LoginRegister/Login.html')
 

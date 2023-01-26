@@ -1,8 +1,10 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load socialaccount %}
+{% load static i18n %}
 
 {% block title %}
-    Pieslēgties
+   {% trans "Pieslēgties" %}
 {% endblock %}
 
 {% block css %}
@@ -12,30 +14,30 @@
 {% block body %}
     <div class='Login-Box'>
         <div class='Main-box'>
-            <h2 class='log-title'> Pieslēgties </h2>
+            <h2 class='log-title'> {% trans 'Pieslēgties' %} </h2>
             {% for message in messages %}
                 <p id="messages">{{message}}</p>
             {% endfor %}
             <form method="POST" action="">
                 {% csrf_token %}
-                <input type="text" name='username' class='log' required='required' placeholder='Lietotājvārds'>
-                <input type="password" name='password' class='log' required='required' placeholder='Parole'>
+                <input type="text" name='username' class='log' required='required' placeholder={% trans 'Lietotājvārds' %}>
+                <input type="password" name='password' class='log' required='required' placeholder={% trans 'Parole' %}>
                 <button type='submit' placeholder='Reģistrēties2' class='submit'>
-                    <label>Pieslēgties</Label>
+                    <label>{% trans "Pieslēgties" %}</Label>
                 </button>
                 <div class='SignUp-Link'>
-                    <p>Vai tev vel nav Profils? 
-                        <a href='{% url 'register' %}' class='SignUpBtn-Link'>Reģistrēties</a>
+                    <p>{% trans "Vai tev vel nav Profils?" %} 
+                        <a href='{% url 'register' %}' class='SignUpBtn-Link'>{% trans "Reģistrēties" %}</a>
                     </p>
-                    <p>Vai aizmirsi paroli? 
-                        <a href='' class='SignUpBtn-Link'>Atjaunot paroli</a>
+                    <p>{% trans "Vai aizmirsi paroli? " %}
+                        <a href='{% url 'password_reset' %}' class='SignUpBtn-Link'>{% trans "Atjaunot paroli" %}</a>
                     </p>
                 </div>
                 <div class='social-platform'>
-                    <p>Pieslēgties ar</p>
+                    <p>{% trans "Pieslēgties ar" %}</p>
                     <div class='social-icons'>
-                        <a class='google'><i class="fa-brands fa-google" id='google'></i></a>
-                        <a class='facebook'><i class="fa-brands fa-facebook-f" class='facebook'></i></a>
+                        <a class='google' href="{% provider_login_url 'google' %}"><i class="fa-brands fa-google" id='google'></i></a>
+                        <a class='facebook' href="{% provider_login_url 'facebook' %}"><i class="fa-brands fa-facebook-f" class='facebook'></i></a>
                     </div>
                 </div>
             </form>
