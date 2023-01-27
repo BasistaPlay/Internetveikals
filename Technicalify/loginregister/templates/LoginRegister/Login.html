@@ -20,9 +20,16 @@
             {% endfor %}
             <form method="POST" action="">
                 {% csrf_token %}
-                <input type="text" name='username' class='log' required='required' placeholder={% trans 'Lietotājvārds' %}>
-                <input type="password" name='password' class='log' required='required' placeholder={% trans 'Parole' %}>
-                <button type='submit' placeholder='Reģistrēties2' class='submit'>
+                <div class='login'>
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" name='username' class='log' required='required' placeholder={% trans 'Lietotājvārds' %}>
+                </div>
+                <div class='lock'>
+                    <i class='bx bxs-lock-alt' ></i>
+                    <ion-icon name="eye-off-outline" class='showPasswordToggle'></ion-icon>
+                    <input type="password" name='password' class='log' required='required' id='passwordField' placeholder={% trans 'Parole' %}>
+                </div>
+                    <button type='submit' placeholder='Reģistrēties2' class='submit'>
                     <label>{% trans "Pieslēgties" %}</Label>
                 </button>
                 <div class='SignUp-Link'>
@@ -36,11 +43,28 @@
                 <div class='social-platform'>
                     <p>{% trans "Pieslēgties ar" %}</p>
                     <div class='social-icons'>
-                        <a class='google' href="{% provider_login_url 'google' %}"><i class="fa-brands fa-google" id='google'></i></a>
-                        <a class='facebook' href="{% provider_login_url 'facebook' %}"><i class="fa-brands fa-facebook-f" class='facebook'></i></a>
+                        <a class='google' href="{% provider_login_url 'google' %}"><i class='bx bxl-google google' ></i></a>
+                        <a class='facebook' href="{% provider_login_url 'facebook' %}"><i class='bx bxl-facebook' class='facebook'></i></a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        const showPasswordToggle = document.querySelector('.showPasswordToggle');
+        const passwordField = document.querySelector('#passwordField')
+
+
+        const handleToggleInput=(e)=>{
+            if (showPasswordToggle.name === 'eye-off-outline'){
+                showPasswordToggle.name = 'eye-outline';
+                passwordField.setAttribute('type', 'text')
+            }else{
+                showPasswordToggle.name = 'eye-off-outline';
+                passwordField.setAttribute('type', 'password')
+            }
+        }
+
+        showPasswordToggle.addEventListener('click', handleToggleInput);
+    </script>
 {% endblock %}

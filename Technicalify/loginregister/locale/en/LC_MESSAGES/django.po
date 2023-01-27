@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-25 23:38+0200\n"
+"POT-Creation-Date: 2023-01-27 00:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,52 +17,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\ForgetPassword\password_reset_complete.html:11
+#: .\templates\ForgetPassword\password_reset_complete.html:15
 msgid "Jaunā parole ir iestatīta"
 msgstr "The new password has been set"
 
-#: .\templates\ForgetPassword\password_reset_complete.html:14
+#: .\templates\ForgetPassword\password_reset_complete.html:16
 msgid "Parole ir iestatita. Jūs varat"
 msgstr "Your password has been set. You can "
 
-#: .\templates\ForgetPassword\password_reset_complete.html:14
+#: .\templates\ForgetPassword\password_reset_complete.html:16
 msgid "pieslēgties"
 msgstr "Log in"
 
-#: .\templates\ForgetPassword\password_reset_confirm.html:11
+#: .\templates\ForgetPassword\password_reset_confirm.html:14
 msgid "Atjaunojiet paroli"
 msgstr "Reset your password"
 
-#: .\templates\ForgetPassword\password_reset_confirm.html:15
+#: .\templates\ForgetPassword\password_reset_confirm.html:16
 msgid "Lūdzu ievadiet savu jauno paroli divreiz:"
 msgstr "Please enter your new password twice:"
 
-#: .\templates\ForgetPassword\password_reset_confirm.html:20
-#| msgid "Atjaunot paroli"
+#: .\templates\ForgetPassword\password_reset_confirm.html:22
 msgid "Nomainīt paroli"
 msgstr "Reset your password"
 
-#: .\templates\ForgetPassword\password_reset_confirm.html:26
+#: .\templates\ForgetPassword\password_reset_confirm.html:27
+#| msgid ""
+#| "Paroles atjaunošana neizdevās,iespejams ,jo ta jau ir izmantota. Lūdzu "
+#| "pieprasiet jaunu paroles atjaunināšanu."
 msgid ""
-"Paroles atjaunošana neizdevās,iespejams ,jo ta jau ir izmantota. Lūdzu "
+"Paroles atjaunošana neizdevās,iespejams, jo ta jau ir izmantota. Lūdzu "
 "pieprasiet jaunu paroles atjaunināšanu."
 msgstr ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 
+#: .\templates\ForgetPassword\password_reset_confirm.html:33
+#: .\templates\LoginRegister\Login.html:24
+#: .\templates\LoginRegister\Register.html:45
+msgid "Parole"
+msgstr "Password"
+
+#: .\templates\ForgetPassword\password_reset_confirm.html:34
+#: .\templates\LoginRegister\Register.html:46
+msgid "Atkārtot paroli"
+msgstr "Repeat your password"
+
 #: .\templates\ForgetPassword\password_reset_done.html:5
 msgid "Atjaunot savu paroli"
 msgstr "Reset your password"
 
-#: .\templates\ForgetPassword\password_reset_done.html:11
+#: .\templates\ForgetPassword\password_reset_done.html:14
 msgid "Atjaunojiet savu paroli"
 msgstr "Reset your password"
 
-#: .\templates\ForgetPassword\password_reset_done.html:14
+#: .\templates\ForgetPassword\password_reset_done.html:15
 msgid "Mēs aizsūtījām jums instrukcijas ,lai atjaunotu paroli"
 msgstr "We've emailed you instructions for setting your password."
 
-#: .\templates\ForgetPassword\password_reset_done.html:17
+#: .\templates\ForgetPassword\password_reset_done.html:16
 msgid ""
 "Ja nesaņēmāt e-pastu,tad pārliecināties ,ka ievadījāt adresi ar ko Jūs "
 "reģistrejāties."
@@ -74,18 +87,24 @@ msgstr ""
 msgid "Vai Jūs aizmirsāt paroli?"
 msgstr "Did you forget your password?"
 
-#: .\templates\ForgetPassword\password_reset_form.html:17
+#: .\templates\ForgetPassword\password_reset_form.html:15
 msgid "Ievadiet lūdzu savu e-pasta adresi, lai iegūtu jaunu paroli"
 msgstr "Enter your e-mail address to obtain a new password."
 
-#: .\templates\ForgetPassword\password_reset_form.html:21
+#: .\templates\ForgetPassword\password_reset_form.html:20
 msgid "Nosūtīt epasta"
 msgstr "Send to email"
+
+#: .\templates\ForgetPassword\password_reset_form.html:29
+#: .\templates\LoginRegister\Register.html:44
+msgid "E-pasts"
+msgstr "E-mail"
 
 #: .\templates\LoginRegister\Login.html:7
 #: .\templates\LoginRegister\Login.html:17
 #: .\templates\LoginRegister\Login.html:26
-#: .\templates\LoginRegister\Register.html:26
+#: .\templates\LoginRegister\Register.html:26 .\templates\base\base.html:129
+#: .\templates\base\base.html:132
 msgid "Pieslēgties"
 msgstr "Log in"
 
@@ -93,11 +112,6 @@ msgstr "Log in"
 #: .\templates\LoginRegister\Register.html:43
 msgid "Lietotājvārds"
 msgstr "Username"
-
-#: .\templates\LoginRegister\Login.html:24
-#: .\templates\LoginRegister\Register.html:45
-msgid "Parole"
-msgstr "Password"
 
 #: .\templates\LoginRegister\Login.html:29
 msgid "Vai tev vel nav Profils?"
@@ -130,14 +144,6 @@ msgstr "Do you already have an account?"
 msgid "Reģistrējies ar"
 msgstr "Sign up with"
 
-#: .\templates\LoginRegister\Register.html:44
-msgid "E-pasts"
-msgstr "E-mail"
-
-#: .\templates\LoginRegister\Register.html:46
-msgid "Atkārtot paroli"
-msgstr "Repeat your password"
-
 #: .\templates\LoginRegister\Register.html:47
 msgid "Jūsu vārds"
 msgstr "Your name"
@@ -146,10 +152,37 @@ msgstr "Your name"
 msgid "Jūsu Uzvārds"
 msgstr "Your last name"
 
-#: .\views.py:24
-msgid "Jūs esat veiksmīgi piereģistrējies"
-msgstr "You have signed in"
+#: .\templates\base\base.html:30 .\templates\base\base.html:37
+#: .\templates\base\base.html:42
+msgid "Kategorija"
+msgstr "Category"
 
-#: .\views.py:43
-msgid "Nav pareizs lietotājvārds vai parole"
-msgstr "Username or password is incorrect"
+#: .\templates\base\base.html:51 .\templates\base\base.html:54
+msgid "Grozs"
+msgstr "Cart"
+
+#: .\templates\base\base.html:60 .\templates\base\base.html:63
+msgid "Salīdzināt"
+msgstr "Compare"
+
+#: .\templates\base\base.html:69 .\templates\base\base.html:72
+msgid "Favorīti"
+msgstr "Favorites"
+
+#: .\templates\base\base.html:78 .\templates\base\base.html:81
+msgid "Iestatījumi"
+msgstr "Settings"
+
+#: .\templates\base\base.html:88 .\templates\base\base.html:93
+msgid "Lokalizācija"
+msgstr "Localization"
+
+#: .\templates\base\base.html:103 .\templates\base\base.html:106
+msgid "Administrātors"
+msgstr "Admin page"
+
+#~ msgid "Jūs esat veiksmīgi piereģistrējies"
+#~ msgstr "You have signed in"
+
+#~ msgid "Nav pareizs lietotājvārds vai parole"
+#~ msgstr "Username or password is incorrect"

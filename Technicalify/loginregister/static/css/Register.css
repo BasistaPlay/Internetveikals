@@ -5,9 +5,9 @@
     padding: 32px;
     gap: 16px;
     position: absolute;
-    width: 550px;
+    width: auto;
     height: auto;
-    left: 450px;
+    left: 550px;
     top: 20px;
     padding: 18px;
 
@@ -76,7 +76,6 @@ flex-grow: 0;
 
 .reg-title{
     text-align: center;
-    font-family: 'cabin';
 }
 
 label{
@@ -85,6 +84,7 @@ label{
 
 .social-icons a {
     display: inline-block;
+    position: relative;
     width: 35px;
     height: 35px;
     background: transparent;
@@ -96,10 +96,13 @@ label{
     cursor: pointer;
     text-decoration: none; 
     color: black; 
+    margin-top: 15px;
 }
 
 .social-icons a i{
-    font-size: 14px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 8px;
     }
 
 .social-icons a:hover i {
@@ -123,12 +126,11 @@ label{
     font-size: 14px;
     color:rgb(0, 0, 0);
     text-align: center;
-    font-family: 'cabin';
     margin-top: 20px;
     
 }
 
-li{
+/* li{
     position: absolute;
     left: 500px;
 	background: #ee7676;
@@ -152,7 +154,7 @@ li:after{
 	border-left: 0;
 	margin-top: -7px;
 	margin-left: -5px;
-}
+} */
 
 
 .SignUp-Link {
@@ -163,13 +165,11 @@ li:after{
 }
 .SignUp-Link p {
     color:rgb(12, 8, 8);
-    font-family: 'Cabin';
 }
 .SignUp-Link p a {
     color: #f4157e;
     text-decoration: none;
     font-weight: 500;
-    font-family: 'Cabin';
     cursor: pointer;
 }
 .SignUp-Link p a:hover {
@@ -180,7 +180,6 @@ li:after{
     cursor: pointer;
     transition: 0.5s;
     transition: all 0.5s;
-    font-family: 'cabin';
     font-size: 16px;
   }
 
@@ -188,7 +187,7 @@ li:after{
     content: '»';
     position: absolute;
     opacity: 0;  
-    top: 14px;
+    top: 10px;
     right: -20px;
     transition: 0.5s;
     color: #fff;
